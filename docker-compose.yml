@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+     bocapio_1_0:
+        build: ./
+        volumes:
+            - "../:/app"
+        working_dir: /app
+        ports:
+            - "8088:8080"
+        command: ['yarn', 'serve']
